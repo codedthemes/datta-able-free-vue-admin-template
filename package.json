@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build-prod": "vue-tsc --noEmit && vite build --base=/demos/admin-templates/datta-able/vue/",
+    "build-prod": "vue-tsc --noEmit && vite build --base=/demos/admin-templates/datta-able/vue/free",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "prettier": "prettier --write src/"
