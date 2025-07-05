@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://codedthemes.com/item/datta-able-bootstrap-lite/)
 [![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/datta-able-free-vue-admin-template)](https://github.com/codedthemes/datta-able-free-vue-admin-template)
-[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=flat-square&logo=github)](https://codedthemes.com/item/datta-able-vue-free-admin-template/)
+[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=flat-square&logo=github)](https://codedthemes.com/item/datta-able-free-vue-admin-template)
 [![Join Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/invite/p2E2WhCb6s)
 
 Datta Able Admin Template comes with variety of components like Button, Badges, Tabs, Breadcrumb, Icons, Form elements, Table, Charts & Authentication pages.
@@ -60,7 +60,7 @@ npm run dev
 
 - Datta Able Free
   - [Live Preview](https://codedthemes.com/demos/admin-templates/datta-able/vue/free)
-  - [Download](https://codedthemes.com/item/datta-able-vue-free-admin-template/)
+  - [Download](https://codedthemes.com/item/datta-able-free-vue-admin-template)
 - Datta Able Pro
   - [Live Preview](https://codedthemes.com/demos/admin-templates/datta-able/vue/)
   - [Download](https://codedthemes.com/item/datta-able-vue-admin-template)
@@ -79,7 +79,7 @@ Get started with a sweet set of features including:
 
 [Pro version](https://codedthemes.com/item/datta-able-vue-admin-template) of Datta Able vue Admin Template contains features like customize with light/dark/system, collapse, LTR / RTL, color presets and many more.
 
-| [Datta Able Free](https://codedthemes.com/item/datta-able-vue-free-admin-template/) | [Datta able Pro](https://codedthemes.com/item/datta-able-vue-admin-template/)                |
+| [Datta Able Free](https://codedthemes.com/item/datta-able-free-vue-admin-template) | [Datta able Pro](https://codedthemes.com/item/datta-able-vue-admin-template/)                |
 | -------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------ |
 | **9** Demo pages                                                                                   | **130+** demo pages                                                |
 | -                                                                                                  | ✓ Multi-language                                                  |
