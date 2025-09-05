@@ -48,6 +48,57 @@
           }
         }
       }
+
+      .btn.dropdown-toggle {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        color: #888;
+
+        i {
+          margin-right: 0;
+        }
+
+        &:after {
+          display: none;
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      // custom toggler
+      .btn.dropdown-toggle {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        right: 8px;
+        top: 8px;
+
+        &.mobile-menu span {
+          background-color: #888;
+          height: 2px;
+          border-radius: 5px;
+
+          &:after,
+          &:before {
+            border-radius: 5px;
+            height: 2px;
+            background-color: #888;
+          }
+        }
+      }
+
+      .nav-pills {
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+      }
     }
   }
 

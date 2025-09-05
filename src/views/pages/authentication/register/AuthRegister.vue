@@ -88,7 +88,7 @@ const handleSubmit = () => {
           class="mb-3"
           label-for="first-name"
           :state="firstNameState"
-          :invalid-feedback="firstNameError"
+          :invalid-feedback="firstNameError ?? ''"
         >
           <BFormInput id="first-name" v-model="firstName" placeholder="First Name" />
         </BFormGroup>
@@ -98,20 +98,25 @@ const handleSubmit = () => {
           class="mb-3"
           label-for="last-name"
           :state="lastNameState"
-          :invalid-feedback="lastNameError"
+          :invalid-feedback="lastNameError ?? ''"
         >
           <BFormInput id="last-name" v-model="lastName" placeholder="Last Name" />
         </BFormGroup>
       </BCol>
     </BRow>
-    <BFormGroup class="mb-3" label-for="email" :state="emailState" :invalid-feedback="emailError">
+    <BFormGroup
+      class="mb-3"
+      label-for="email"
+      :state="emailState"
+      :invalid-feedback="emailError ?? ''"
+    >
       <BFormInput id="email" type="email" v-model="email" placeholder="Email Address" />
     </BFormGroup>
     <BFormGroup
       class="mb-3"
       label-for="password"
       :state="passwordState"
-      :invalid-feedback="passwordError"
+      :invalid-feedback="passwordError ?? ''"
     >
       <BFormInput id="password" type="password" v-model="password" placeholder="Password" />
     </BFormGroup>
@@ -119,7 +124,7 @@ const handleSubmit = () => {
       class="mb-3"
       label-for="confirm-password"
       :state="confirmPasswordState"
-      :invalid-feedback="confirmPasswordError"
+      :invalid-feedback="confirmPasswordError ?? ''"
     >
       <BFormInput
         id="confirm-password"

@@ -10,9 +10,14 @@ import 'jsvectormap/src/scss/jsvectormap.scss'
 const mapWorld = ref<HTMLElement | null>(null)
 interface JsVectorMapInstance {
   destroy: () => void
+  updateSize: () => void
 }
 
 let mapInstance: JsVectorMapInstance | null = null
+
+const resizeHandler = () => {
+  mapInstance?.updateSize()
+}
 
 onMounted(() => {
   if (mapWorld.value) {
@@ -54,10 +59,13 @@ onMounted(() => {
       },
       // You can customize more options here
     })
+    // Listen for window resize
+    window.addEventListener('resize', resizeHandler)
   }
 })
 
 onBeforeUnmount(() => {
+  window.removeEventListener('resize', resizeHandler)
   mapInstance?.destroy()
 })
 </script>

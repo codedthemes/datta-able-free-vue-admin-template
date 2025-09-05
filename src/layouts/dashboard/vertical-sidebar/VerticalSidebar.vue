@@ -47,7 +47,7 @@ const sidebarMenu = shallowRef(sidebarItems)
             <!---Menu Loop -->
             <template v-for="(item, i) in sidebarMenu" :key="i">
               <!---Item Sub Header -->
-              <NavGroup :item="item" v-if="item.header" :key="item.title" />
+              <NavGroup :item="item" v-if="item.header" :key="item.title ?? i" />
               <!---If Has Child -->
               <NavCollapse :item="item" :level="0" v-else-if="item.children" />
               <!---Single Item-->

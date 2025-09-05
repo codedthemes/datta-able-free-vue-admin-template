@@ -110,6 +110,113 @@
     }
   }
   // light color end
+  // link color start
+  .btn-link-#{$color} {
+    background: transparent;
+    color: $value;
+    border-color: transparent;
+
+    &:hover {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+
+    &.focus,
+    &:focus {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+  }
+
+  .btn-check:active,
+  .btn-check:checked {
+    + .btn-link-#{$color} {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+  }
+  // link color end
+  // link hover color start
+  .btn-link-hover-#{$color} {
+    background: transparent;
+    color: var(--bs-secondary);
+    border-color: transparent;
+    &:hover {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+
+    &.focus,
+    &:focus {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+  }
+
+  .btn-check:active,
+  .btn-check:checked {
+    + .btn-link-hover-#{$color} {
+      background: shift-color($value, $soft-bg-level);
+      color: $value;
+      border-color: shift-color($value, $soft-bg-level);
+    }
+  }
+  // link hover color end
+}
+
+@each $color, $value in $social-colors {
+  .btn-light-#{$color} {
+    background: shift-color($value, $soft-bg-level);
+    color: $value;
+    border-color: shift-color($value, $soft-bg-level);
+
+    &:hover {
+      background: $value;
+      color: #fff;
+      border-color: $value;
+    }
+
+    &.focus,
+    &:focus {
+      background: $value;
+      color: #fff;
+      border-color: $value;
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      background: $value;
+      color: #fff;
+      border-color: $value;
+    }
+  }
+}
+.btn-pc-default {
+  &:not(:hover) {
+    color: var(--bs-secondary);
+  }
 }
 
 // ============================

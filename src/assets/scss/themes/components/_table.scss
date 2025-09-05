@@ -1,7 +1,7 @@
 // ============================
 //   17. Table css start
 // ============================
-
+@use 'sass:color';
 .table {
   &.table-align-center {
     td,
@@ -25,7 +25,20 @@
 }
 
 .table-hover tbody tr:hover {
-  background-color: transparentize($primary, 0.97);
+  background-color: #{color.adjust($primary, $alpha: -0.97)};
+}
+
+.affiliate-table {
+  tr {
+    th,
+    td {
+      &:first-child {
+        @include media-breakpoint-down(xl) {
+          min-width: 150px;
+        }
+      }
+    }
+  }
 }
 
 // ============================

@@ -5,10 +5,7 @@ import { useUIStore } from '@/stores/ui'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    PublicRoutes,
-    MainRoutes,
-  ],
+  routes: [PublicRoutes, MainRoutes],
   scrollBehavior() {
     return { top: 0 }
   },

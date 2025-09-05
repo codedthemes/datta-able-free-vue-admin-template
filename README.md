@@ -79,14 +79,14 @@ Get started with a sweet set of features including:
 
 [Pro version](https://codedthemes.com/item/datta-able-vue-admin-template) of Datta Able vue Admin Template contains features like customize with light/dark/system, collapse, LTR / RTL, color presets and many more.
 
-| [Datta Able Free](https://codedthemes.com/item/datta-able-free-vue-admin-template) | [Datta able Pro](https://codedthemes.com/item/datta-able-vue-admin-template/)                |
-| -------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------ |
-| **9** Demo pages                                                                                   | **130+** demo pages                                                |
-| -                                                                                                  | ✓ Multi-language                                                  |
-| -                                                                                                  | ✓ Dark/Light Mode 🌓                                              |
-| -                                                                                                  | ✓ 6+ Color Setting Option                                                |
-| -                                                                                                  | ✓ RTL                                                             |
-| ✓ [MIT License](https://github.com/codedthemes/datta-able-free-vue-admin-template/blob/master/LICENSE)                                                                                      | ✓ [Pro License](https://codedthemes.com/item/datta-able-vue-admin-template/) |
+| [Datta Able Free](https://codedthemes.com/item/datta-able-free-vue-admin-template)                     | [Datta able Pro](https://codedthemes.com/item/datta-able-vue-admin-template/) |
+| ------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------- |
+| **9** Demo pages                                                                                       | **130+** demo pages                                                           |
+| -                                                                                                      | ✓ Multi-language                                                              |
+| -                                                                                                      | ✓ Dark/Light Mode 🌓                                                          |
+| -                                                                                                      | ✓ 6+ Color Setting Option                                                     |
+| -                                                                                                      | ✓ RTL                                                                         |
+| ✓ [MIT License](https://github.com/codedthemes/datta-able-free-vue-admin-template/blob/master/LICENSE) | ✓ [Pro License](https://codedthemes.com/item/datta-able-vue-admin-template/)  |
 
 ## Documentation
 
@@ -105,23 +105,23 @@ Get started with a sweet set of features including:
 
 ## Other Technologies
 
-| Technology                                                                                                                        | Free                                                                               | Pro                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/React.png" width="25" height="25"></p>   | [**Free**](https://codedthemes.com/item/datta-able-react-free-admin-template/)       | [**Pro**](https://codedthemes.com/item/datta-able-react-admin-template/)    |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Angular.png" width="30" height="30"></p> | [**Free**](https://codedthemes.com/item/datta-able-angular-lite/)     | [**Pro**](https://codedthemes.com/item/datta-able-angular/) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/tailwind.png" width="25" height="25"></p>       | [**Free**](https://codedthemes.com/item/datta-able-free-tailwind-admin-template/) | [**Pro**](https://codedthemes.com/item/datta-able-tailwind-admin-template/)        |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/laravel.png" width="25" height="25"></p>       | - | [**Pro**](https://codedthemes.com/item/datta-able-laravel-admin-dashboard/)        |
- 
+| Technology                                                                                                                       | Free                                                                              | Pro                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/React.png" width="25" height="25"></p>    | [**Free**](https://codedthemes.com/item/datta-able-react-free-admin-template/)    | [**Pro**](https://codedthemes.com/item/datta-able-react-admin-template/)    |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Angular.png" width="30" height="30"></p>  | [**Free**](https://codedthemes.com/item/datta-able-angular-lite/)                 | [**Pro**](https://codedthemes.com/item/datta-able-angular/)                 |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/tailwind.png" width="25" height="25"></p> | [**Free**](https://codedthemes.com/item/datta-able-free-tailwind-admin-template/) | [**Pro**](https://codedthemes.com/item/datta-able-tailwind-admin-template/) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/laravel.png" width="25" height="25"></p>  | -                                                                                 | [**Pro**](https://codedthemes.com/item/datta-able-laravel-admin-dashboard/) |
+
 ## Save more with Big Bundle
 
 [![bundle-image](https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Bundle+banner.png)](https://links.codedthemes.com/jhFBJ)
 
 ## More Vue Dashboard Templates
 
-| Dashboard                                                                                                                                                          | FREE                                                                                | PRO                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Berry%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">   | [**Free**](https://codedthemes.com/item/berry-free-vuetify-vuejs-admin-template/)       | [**Pro**](https://codedthemes.com/item/berry-vue-admin-dashboard/)</span>   |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;">    | [**Free**](https://codedthemes.com/item/mantis-free-vuetify-vuejs-admin-template/)      | [**Pro**](https://codedthemes.com/item/mantis-vue-admin-template/)</span>       |
+| Dashboard                                                                                                                                                        | FREE                                                                               | PRO                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Berry%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;"> | [**Free**](https://codedthemes.com/item/berry-free-vuetify-vuejs-admin-template/)  | [**Pro**](https://codedthemes.com/item/berry-vue-admin-dashboard/)</span> |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;"> | [**Free**](https://codedthemes.com/item/mantis-free-vuetify-vuejs-admin-template/) | [**Pro**](https://codedthemes.com/item/mantis-vue-admin-template/)</span> |
 
 ## Issues
 
@@ -132,7 +132,7 @@ If you found a bug in any version, please generate a [GitHub issue](https://gith
 - Licensed under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/readme/LICENSE)
 - Copyright © [CodedThemes](https://codedthemes.com/)
 
-## Contributor 
+## Contributor
 
 **CodedThemes Team**
 

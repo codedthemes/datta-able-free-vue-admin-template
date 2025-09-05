@@ -11,7 +11,6 @@ File: style.css
 4.  header css
 5.  footer css
 6.  Common layout css
-7.  Compact layout css
 8.  Horizontal layout css
 9.  Tab layout css
 10. Widget css 
@@ -44,6 +43,9 @@ File: style.css
 
 =========================================================================
 =================================================================================== */
+@use 'sass:map';
+@use 'sass:color';
+@use 'sass:string';
 
 // main framework
 @import 'bootstrap/scss/functions';
@@ -88,8 +90,17 @@ File: style.css
 @import 'bootstrap/scss/offcanvas';
 @import 'bootstrap/scss/placeholders';
 @import 'bootstrap/scss/helpers';
-@import 'bootstrap/scss/utilities';
-@import 'bootstrap/scss/utilities/api';
+
+[data-pc-direction='ltr'] {
+  @import 'bootstrap/scss/utilities';
+  @import 'bootstrap/scss/utilities/api';
+}
+
+[data-pc-direction='rtl'] {
+  @import 'themes/layouts/style-rtl-utility';
+  @import 'bootstrap/scss/utilities/api';
+}
+
 // main framework
 @import 'themes/generic';
 @import 'themes/general';
@@ -99,6 +110,8 @@ File: style.css
 @import 'themes/layouts/pc-header';
 @import 'themes/layouts/pc-footer';
 @import 'themes/layouts/pc-common';
+@import 'themes/layouts/pc-horizontal';
+@import 'themes/layouts/pc-tab';
 
 // widget
 @import 'themes/components/widget';
@@ -111,7 +124,28 @@ File: style.css
 @import 'themes/components/card';
 @import 'themes/components/progress';
 @import 'themes/components/table';
+@import 'themes/components/tabs';
 @import 'themes/components/form';
 
 // pages
 @import 'themes/pages/authentication';
+@import 'themes/pages/maintaince';
+@import 'themes/pages/pages';
+@import 'themes/pages/icon-pages';
+@import 'themes/pages/user';
+@import 'themes/pages/application';
+@import 'themes/pages/admin';
+
+// custom plugins
+@import 'themes/plugins/sweatalert';
+@import 'themes/plugins/lightbox';
+@import 'themes/plugins/notification';
+@import 'themes/plugins/modal';
+@import 'themes/plugins/rangeslider';
+@import 'themes/plugins/daterange';
+@import 'themes/plugins/tags-input';
+@import 'themes/plugins/slider';
+@import 'themes/plugins/switches';
+@import 'themes/plugins/data-tables';
+
+@import 'themes/layouts/customizer';

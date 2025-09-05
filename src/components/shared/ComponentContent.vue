@@ -28,7 +28,7 @@ const props = defineProps({
         size="sm"
         pill
         class="btn-light-primary"
-        :href="props.link"
+        :href="props.link ?? ''"
         target="_blank"
       >
         <i class="ti ti-external-link me-1"></i>

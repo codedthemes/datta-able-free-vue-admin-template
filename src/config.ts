@@ -4,7 +4,6 @@ export type ConfigProps = {
 
 const config: ConfigProps = {
   sidebarCollapse: true,
-
 }
 
 export default config

@@ -4,6 +4,7 @@ import '@/assets/scss/style-preset.scss'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createBootstrap } from 'bootstrap-vue-next'
+import VueApexCharts from 'vue3-apexcharts'
 
 import App from './App.vue'
 import router from './router'
@@ -24,5 +25,6 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-app.use(createBootstrap()),
-  app.mount('#app')
+app.use(createBootstrap())
+app.use(VueApexCharts)
+app.mount('#app')

@@ -2,8 +2,31 @@
     1. Generic-class css start
 ========================== **/
 /*====== Padding , Margin css starts ======*/
+@use 'sass:map';
 $i: 0;
 @while $i<=50 {
+  .p {
+    &-#{$i} {
+      padding: #{$i}px;
+    }
+
+    &-t-#{$i} {
+      padding-top: #{$i}px;
+    }
+
+    &-b-#{$i} {
+      padding-bottom: #{$i}px;
+    }
+
+    &-l-#{$i} {
+      padding-left: #{$i}px;
+    }
+
+    &-r-#{$i} {
+      padding-right: #{$i}px;
+    }
+  }
+
   .m {
     &-#{$i} {
       margin: #{$i}px;
@@ -59,7 +82,14 @@ $i: 10;
   $i: $i + 5;
 }
 /*====== width, Height css ends ======*/
-
+/*====== border-width css starts ======*/
+$i: 1;
+@while $i<=8 {
+  .b-wid-#{$i} {
+    border-width: #{$i}px;
+  }
+  $i: $i + 1;
+}
 /*====== border-width css ends ======*/
 /*====== background starts ======*/
 
@@ -69,7 +99,21 @@ $i: 10;
 .bg-body {
   background: var(--bs-body-bg);
 }
+@each $color, $value in $theme-colors {
+  .bg-light-#{$color} {
+    background: shift-color($value, $soft-bg-level);
+    color: $value;
+  }
 
+  .icon-svg-#{$color} {
+    fill: shift-color($value, $soft-bg-level);
+    stroke: $value;
+  }
+
+  .text-hover-#{$color}:hover {
+    color: $value !important;
+  }
+}
 /*====== background ends ======*/
 /*====== border color css starts ======*/
 @each $color, $value in $theme-colors {
@@ -97,6 +141,35 @@ $i: 10;
   }
 }
 /*====== brand color css ends ======*/
+/*====== text-color, background color css starts ======*/
+$social-colors: (
+  'facebook': #4267b2,
+  'twitter': #42c0fb,
+  'dribbble': #ec4a89,
+  'pinterest': #bf2131,
+  'youtube': #e0291d,
+  'googleplus': #c73e2e,
+  'instagram': #aa7c62,
+  'viber': #7b519d,
+  'behance': #0057ff,
+  'dropbox': #3380ff,
+  'linkedin': #0077b5,
+  'amazon': #000000,
+);
+@each $color, $value in $social-colors {
+  .bg-light-#{$color} {
+    background: shift-color($value, $soft-bg-level);
+    color: $value;
+  }
+  .bg-#{$color} {
+    background: $value;
+  }
+
+  .text-#{$color} {
+    color: $value;
+  }
+}
+/*====== text-color css ends ======*/
 
 .font-hairline {
   font-weight: 100 !important;
@@ -222,17 +295,6 @@ $more-colors: (
     800: $blue-800,
     900: $blue-900,
   ),
-  'indigo': (
-    100: $indigo-100,
-    200: $indigo-200,
-    300: $indigo-300,
-    400: $indigo-400,
-    500: $indigo-500,
-    600: $indigo-600,
-    700: $indigo-700,
-    800: $indigo-800,
-    900: $indigo-900,
-  ),
   'purple': (
     100: $purple-100,
     200: $purple-200,
@@ -299,17 +361,6 @@ $more-colors: (
     800: $green-800,
     900: $green-900,
   ),
-  'teal': (
-    100: $teal-100,
-    200: $teal-200,
-    300: $teal-300,
-    400: $teal-400,
-    500: $teal-500,
-    600: $teal-600,
-    700: $teal-700,
-    800: $teal-800,
-    900: $teal-900,
-  ),
   'cyan': (
     100: $cyan-100,
     200: $cyan-200,
@@ -349,7 +400,7 @@ $more-colors: (
   @each $name, $value in $more-colors {
     $i: 100;
     @while $i<=900 {
-      $temp: map-get($value, $i);
+      $temp: map.get($value, $i);
       --bs-#{$name}-#{$i}: #{$temp};
       $i: $i + 100;
     }

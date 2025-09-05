@@ -52,13 +52,13 @@ const sidebarItem: menu[] = [
     title: 'Login',
     icon: 'ph-lock',
     to: '/login',
-    type: 'external'
+    type: 'external',
   },
   {
     title: 'Register',
     icon: 'ph-user-plus',
     to: '/register',
-    type: 'external'
+    type: 'external',
   },
   { header: 'Other' },
   {

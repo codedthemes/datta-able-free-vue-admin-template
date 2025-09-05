@@ -9,15 +9,18 @@ const ToggleSidebar = () => {
 }
 
 const MobileToggleSidebar = () => {
-  document.querySelector('.pc-sidebar')?.classList.toggle('mob-sidebar-active')
-  document
-    .querySelector('.pc-sidebar')
-    ?.insertAdjacentHTML('beforeend', '<div class="pc-menu-overlay"></div>')
+  const sidebar = document.querySelector('.pc-sidebar')
+  sidebar?.classList.toggle('mob-sidebar-active')
 
-  document.querySelector('.pc-menu-overlay').addEventListener('click', function () {
-    document.querySelector('.pc-sidebar')?.classList.remove('mob-sidebar-active')
-    document.querySelector('.pc-sidebar .pc-menu-overlay').remove()
-  })
+  sidebar?.insertAdjacentHTML('beforeend', '<div class="pc-menu-overlay"></div>')
+
+  const overlay = document.querySelector('.pc-menu-overlay')
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      sidebar?.classList.remove('mob-sidebar-active')
+      overlay.remove()
+    })
+  }
 }
 </script>
 
@@ -30,7 +33,7 @@ const MobileToggleSidebar = () => {
           <!-- ======= Menu collapse Icon ===== -->
           <li class="pc-h-item pc-sidebar-collapse">
             <a
-              href="#!"
+              href="javascript:void(0)"
               class="pc-head-link ms-0"
               aria-label="toggle sidebar"
               @click="ToggleSidebar()"
@@ -40,7 +43,7 @@ const MobileToggleSidebar = () => {
           </li>
           <li class="pc-h-item pc-sidebar-popup">
             <a
-              href="#!"
+              href="javascript:void(0)"
               class="pc-head-link ms-0"
               aria-label="collapse sidebar"
               @click="MobileToggleSidebar()"
