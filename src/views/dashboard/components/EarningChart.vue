@@ -112,7 +112,7 @@ const lineChart = {
 </script>
 
 <template>
-  <BCard class="bg-primary" header-class="border-0" body-class="py-0 p-x-25">
+  <BCard class="bg-primary overflow-hidden" header-class="border-0" body-class="py-0 p-x-25">
     <template #header>
       <h5 class="text-white">Earnings</h5>
     </template>
@@ -129,7 +129,7 @@ const lineChart = {
     <apexchart
       type="line"
       height="210"
-      class="ChartShadow"
+      class="WidgetlineChart2 ChartShadow"
       :options="chartOptions"
       :series="lineChart.series"
     />

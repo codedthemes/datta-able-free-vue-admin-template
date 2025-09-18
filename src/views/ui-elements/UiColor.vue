@@ -65,17 +65,6 @@ function showBadge(element: HTMLElement, message: string, badgeClass: string) {
               v-for="shade in shades"
               :key="shade"
               class="p-3 color-block"
-              :class="`bg-indigo-${shade}`"
-              @click="handleCopy(`bg-indigo-${shade}`, $event)"
-            >
-              bg-indigo-{{ shade }}
-            </div>
-          </BCol>
-          <BCol md="4">
-            <div
-              v-for="shade in shades"
-              :key="shade"
-              class="p-3 color-block"
               :class="`bg-purple-${shade}`"
               @click="handleCopy(`bg-purple-${shade}`, $event)"
             >
@@ -142,17 +131,6 @@ function showBadge(element: HTMLElement, message: string, badgeClass: string) {
               v-for="shade in shades"
               :key="shade"
               class="p-3 color-block"
-              :class="`bg-teal-${shade}`"
-              @click="handleCopy(`bg-teal-${shade}`, $event)"
-            >
-              bg-teal-{{ shade }}
-            </div>
-          </BCol>
-          <BCol md="4">
-            <div
-              v-for="shade in shades"
-              :key="shade"
-              class="p-3 color-block"
               :class="`bg-cyan-${shade}`"
               @click="handleCopy(`bg-cyan-${shade}`, $event)"
             >
@@ -187,17 +165,6 @@ function showBadge(element: HTMLElement, message: string, badgeClass: string) {
               @click="handleCopy(`text-blue-${shade}`, $event)"
             >
               text-blue-{{ shade }}
-            </div>
-          </BCol>
-          <BCol md="4">
-            <div
-              v-for="shade in shades"
-              :key="shade"
-              class="p-3 color-block"
-              :class="`text-indigo-${shade}`"
-              @click="handleCopy(`text-indigo-${shade}`, $event)"
-            >
-              text-indigo-{{ shade }}
             </div>
           </BCol>
           <BCol md="4">
@@ -264,17 +231,6 @@ function showBadge(element: HTMLElement, message: string, badgeClass: string) {
               @click="handleCopy(`text-green-${shade}`, $event)"
             >
               text-green-{{ shade }}
-            </div>
-          </BCol>
-          <BCol md="4">
-            <div
-              v-for="shade in shades"
-              :key="shade"
-              class="p-3 color-block"
-              :class="`text-teal-${shade}`"
-              @click="handleCopy(`text-teal-${shade}`, $event)"
-            >
-              text-teal-{{ shade }}
             </div>
           </BCol>
           <BCol md="4">

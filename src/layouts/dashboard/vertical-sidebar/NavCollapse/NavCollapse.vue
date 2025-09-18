@@ -38,7 +38,9 @@ watch(
     await nextTick()
 
     if (submenu.value && isActive.value) {
-      submenu.value.style.display = 'block'
+      slideDown(submenu.value)
+    } else if (submenu.value) {
+      slideUp(submenu.value)
     }
   },
   { immediate: true },

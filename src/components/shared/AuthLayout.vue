@@ -29,7 +29,7 @@ import darkLight from '@/assets/images/logo-dark.svg'
           </div>
           <BCard class="mb-0">
             <div class="text-center">
-              <router-link to="/dashboard/default">
+              <router-link to="/">
                 <BImg :src="darkLight" alt="logo" fluid />
               </router-link>
             </div>

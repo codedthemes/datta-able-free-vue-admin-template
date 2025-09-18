@@ -1,7 +1,7 @@
 // ============================
 //   4. header css start
 // ============================
-
+@use 'sass:color';
 .pc-header {
   background: var(--pc-header-background);
   color: var(--pc-header-color);
@@ -225,6 +225,53 @@
 
   .drp-search {
     min-width: 20rem;
+  }
+
+  #vertical-nav-toggle {
+    margin-left: -15px;
+  }
+
+  .pc-cart-menu .drp-cart {
+    min-width: 20rem;
+    padding: 0;
+
+    .cart-head {
+      border-radius: 2px 2px 0 0;
+      padding: 20px;
+      background: #{color.adjust(shift-color($primary, $soft-bg-level), $alpha: -0.8)};
+      border-bottom: 1px solid $border-color;
+    }
+
+    .cart-item {
+      display: flex;
+      padding: 10px 20px;
+
+      + .cart-item {
+        border-top: 1px dashed $border-color;
+      }
+
+      img {
+        width: 60px;
+      }
+
+      .cart-desc {
+        flex: 1;
+      }
+
+      .p-star {
+        fill: currentColor;
+      }
+
+      &.table-responsive {
+        border-top: 1px solid $border-color;
+        background: #{color.adjust(shift-color($primary, $soft-bg-level), $alpha: -0.8)};
+      }
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
   }
 
   .user-avatar {
@@ -503,6 +550,16 @@
   .minimenu {
     .pc-header {
       left: 0;
+    }
+  }
+}
+
+#pc-noti-home {
+  > .media {
+    &:hover {
+      margin: -15px;
+      padding: 15px;
+      background: rgba($primary, 0.1);
     }
   }
 }

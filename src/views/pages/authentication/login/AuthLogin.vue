@@ -53,7 +53,7 @@ const handleSubmit = () => {
       <BFormCheckbox id="customCheck1" v-model="status" name="customCheck1" class="text-muted mb-0">
         Remember me?
       </BFormCheckbox>
-      <router-link class="text-secondary" to="/reset-password1">Forgot Password?</router-link>
+      <router-link class="text-secondary" to="">Forgot Password?</router-link>
     </div>
     <div class="text-center mt-4">
       <BButton

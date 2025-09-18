@@ -68,6 +68,17 @@
   }
 }
 
+.dropdown-menu-dark {
+  .dropdown-item {
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--bs-dropdown-link-hover-color);
+      background-color: var(--bs-dropdown-link-hover-bg);
+    }
+  }
+}
 // ============================
 //   14. Dropdown css end
 // ============================

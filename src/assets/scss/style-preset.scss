@@ -6,6 +6,10 @@ Support: https://codedthemes.support-hub.io/
 File: style.css
 =========================================================================
 =================================================================================== */
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:string';
+@use 'sass:map';
 
 // main framework
 @import 'settings/color-variables';
@@ -19,7 +23,7 @@ File: style.css
 $i: 1;
 @each $name, $value in $preset-colors {
   [data-pc-preset='#{$name}'] {
-    $pc-primary: map-get($value, 'primary');
+    $pc-primary: map.get($value, 'primary');
     $color-rgb: to-rgb($pc-primary);
     $pc-primary-light: tint-color($pc-primary, 90%);
     --pc-sidebar-active-color: #{$pc-primary};
@@ -40,7 +44,7 @@ $i: 1;
     }
 
     .link-primary {
-      $value: map-get($value, 'primary');
+      $value: map.get($value, 'primary');
       color: $value !important; // stylelint-disable-line declaration-no-important
 
       @if $link-shade-percentage !=0 {
@@ -132,6 +136,57 @@ $i: 1;
       --bs-progress-bar-bg: #{$pc-primary};
     }
 
+    .form-check {
+      .form-check-input {
+        &.input-primary {
+          &:checked {
+            border-color: $pc-primary;
+            background-color: $pc-primary;
+          }
+        }
+
+        &.input-light-primary {
+          &:checked {
+            border-color: shift-color($pc-primary, $soft-bg-level);
+            background-color: shift-color($pc-primary, $soft-bg-level);
+
+            &[type='checkbox'] {
+              background-image: escape-svg(
+                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$pc-primary}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>")
+              );
+            }
+
+            &[type='radio'] {
+              background-image: escape-svg(
+                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$pc-primary}'/></svg>")
+              );
+            }
+          }
+        }
+
+        &.input-primary,
+        &.input-light-primary {
+          &:focus {
+            &[type='checkbox'],
+            &[type='radio'] {
+              box-shadow: 0 0 0 0.2rem rgba($pc-primary, 0.25);
+              border-color: $pc-primary;
+            }
+          }
+        }
+      }
+
+      &.form-switch {
+        .form-check-input.input-light-primary {
+          &:checked {
+            background-image: escape-svg(
+              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pc-primary}'/></svg>")
+            );
+          }
+        }
+      }
+    }
+
     .btn-light-primary {
       background: $pc-primary-light;
       color: $pc-primary;
@@ -204,6 +259,124 @@ $i: 1;
       }
     }
 
+    .slider-selection {
+      background-image: linear-gradient(
+        to bottom,
+        #{color.adjust($pc-primary, $lightness: 25%)} 0,
+        #{color.adjust($pc-primary, $lightness: 25%)} 100%
+      );
+
+      &.tick-slider-selection {
+        background-image: linear-gradient(
+          to bottom,
+          #{color.adjust($pc-primary, $lightness: 20%)} 0,
+          #{color.adjust($pc-primary, $lightness: 20%)} 100%
+        );
+      }
+    }
+
+    .swal-button {
+      &:not([disabled]):hover {
+        background-color: #{color.adjust($pc-primary, $lightness: -5%)};
+      }
+
+      &:active {
+        background-color: #{color.adjust($pc-primary, $lightness: -5%)};
+      }
+
+      &:focus {
+        box-shadow:
+          0 0 0 1px #fff,
+          0 0 0 3px #{color.adjust($pc-primary, $alpha: -0.71)};
+      }
+    }
+
+    .swal-content__input:focus {
+      border-color: #{color.adjust($pc-primary, $alpha: -0.71)};
+    }
+
+    .swal-content__textarea {
+      &:focus {
+        border-color: #{color.adjust($pc-primary, $alpha: -0.71)};
+      }
+    }
+
+    .swal2-styled {
+      &:focus {
+        box-shadow:
+          0 0 0 1px #fff,
+          0 0 0 3px rgba($pc-primary, 0.4) !important;
+      }
+    }
+
+    .slider-tick {
+      &.in-selection {
+        background-image: linear-gradient(
+          to bottom,
+          #{color.adjust($pc-primary, $lightness: 20%)} 0,
+          #{color.adjust($pc-primary, $lightness: 20%)} 100%
+        );
+      }
+    }
+
     @include table-variant('primary', $pc-primary);
   }
+
+  [data-pc-header='#{$name}'] {
+    $color-rgb: to-rgb($value);
+    --pc-header-background: rgba(#{$color-rgb}, 0.85);
+    --pc-header-color: #fff;
+  }
+  [data-pc-navbar='#{$name}'] {
+    $color-rgb: to-rgb($value);
+    --pc-sidebar-background: #{$value};
+    --pc-sidebar-color: #fff;
+  }
+  [data-pc-logo='#{$name}'] {
+    --pc-logo-bg: #{$value};
+  }
+  [data-pc-caption='#{$name}'] {
+    --pc-sidebar-caption-color: #{$value};
+  }
+  [data-pc-navimg='#{$name}'] {
+    --pc-sidebar-background: url('../images/layout/navbar-img-#{$i}.jpg');
+  }
+  $i: $i + 1;
+}
+
+$drp-icon: (
+  'preset-1': '\ea61',
+  'preset-2': '\ea65',
+  'preset-3': '\eb5f',
+  'preset-4': '\ea69',
+  'preset-5': '\eb0b',
+);
+@each $key, $value in $drp-icon {
+  [data-pc-drp-menu-icon='#{$key}'] {
+    --pc-sidebar-drp-menu-icon: '#{$value}';
+  }
+}
+
+$drp-link-icon: (
+  'preset-1': '',
+  'preset-2': '\ea1c',
+  'preset-3': '\ea61',
+  'preset-4': '\ea65',
+  'preset-5': '\ea7d',
+  'preset-6': '\eaf2',
+);
+@each $key, $value in $drp-link-icon {
+  [data-pc-drp-menu-link-icon='#{$key}'] {
+    --pc-sidebar-drp-menu-link-icon: '#{$value}';
+  }
+}
+
+[data-pc-direction='rtl'] {
+  direction: rtl;
+  text-align: right;
+  @import 'themes/layouts/style-rtl';
+}
+
+[data-pc-theme='dark'] {
+  @import 'themes/layouts/style-dark';
 }
