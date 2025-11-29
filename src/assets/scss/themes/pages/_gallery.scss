@@ -438,7 +438,7 @@ figure {
     background: #34495e;
 
     figcaption {
-      padding: 1em;
+      padding: 1.3em;
 
       &::after,
       &::before {
@@ -496,7 +496,7 @@ figure {
 
       a {
         display: block;
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
         color: #fff;
         opacity: 0;
         transform: translate3d(90px, 0, 0);
@@ -689,7 +689,7 @@ figure {
     }
 
     p {
-      padding: 2.25em 0.5em;
+      padding: 2.1em 0.5em;
       font-weight: 600;
       font-size: 100%;
       line-height: 1.5;
@@ -848,7 +848,7 @@ figure {
       transform: translate3d(10px, 10px, 0);
       [dir='rtl'] & {
         text-align: right;
-        transform: translate3d(-10px, -10px, 0);
+        transform: translate3d(10px, -10px, 0);
       }
     }
 
@@ -864,7 +864,7 @@ figure {
       [dir='rtl'] & {
         float: left;
         text-align: left;
-        transform: translate3d(50%, 50%, 0);
+        transform: translate3d(50%, -50%, 0);
       }
     }
 
@@ -975,7 +975,7 @@ figure {
     }
 
     h2 {
-      margin: 20% 0 10px;
+      margin: 18% 0 10px;
       transition: transform 0.35s;
     }
 
@@ -1127,6 +1127,28 @@ figure {
   }
 }
 /* Media queries */
+
+@media screen and (max-width: 1024px) {
+  figure {
+    &.effect-moses {
+      h2,
+      .h2 {
+        padding: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  figure {
+    &.effect-kira {
+      p {
+        padding: 2.5em 0.5em;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 920px) {
   figure.effect-terry h2 {
     padding: 0.75em 10px;
@@ -1146,12 +1168,96 @@ figure {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 575px) {
+  figure {
+    &.effect-kira {
+      p {
+        padding: 3em 0.5em;
+      }
+    }
+    &.effect-steve {
+      h2,
+      .h2 {
+        margin-top: 1em;
+      }
+    }
+    &.effect-moses {
+      figcaption {
+        padding: 1em;
+      }
+      p,
+      h2,
+      .h2 {
+        padding: 10px;
+      }
+    }
+    &.effect-jazz {
+      h2,
+      .h2 {
+        padding-top: 13%;
+      }
+      figcaption {
+        padding: 1em;
+      }
+    }
+    &.effect-ming {
+      figcaption {
+        padding: 1em;
+      }
+      p {
+        font-size: 62%;
+      }
+    }
+    &.effect-lexi {
+      figcaption {
+        padding: 1em;
+        &::before {
+          width: 260px;
+          height: 260px;
+        }
+      }
+    }
+    &.effect-duke {
+      p {
+        margin: 10px;
+        padding: 20px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 480px) {
   .grid {
     figure {
       min-width: auto;
       h2 {
         font-size: 30px;
+      }
+    }
+  }
+  figure {
+    &.effect-hera {
+      figcaption {
+        &::before {
+          width: 135px;
+          height: 135px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 472px) {
+  figure {
+    &.effect-goliath {
+      p,
+      h2 {
+        padding: 20px;
+      }
+      &:hover h2,
+      &:hover .h2 {
+        transform: translate3d(0, -90px, 0);
       }
     }
   }

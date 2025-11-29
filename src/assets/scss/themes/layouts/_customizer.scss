@@ -2,6 +2,7 @@
   36. Customizer css start
 ==========================  **/
 @use 'sass:map';
+
 // main framework
 .pct-c-btn {
   display: block;
@@ -50,6 +51,7 @@
     transform: rotate(360deg);
   }
 }
+
 .pct-tabs {
   background: rgba(var(--bs-primary-rgb), 0.06);
   border-top: 1px solid var(--bs-border-color);
@@ -220,6 +222,7 @@
       $i: $i + 1;
     }
   }
+
   &.navbar-img {
     > a {
       width: 45px;
@@ -228,16 +231,19 @@
       background-size: cover;
     }
   }
+
   &.drp-menu-link-icon,
   &.drp-menu-icon {
     > a {
       width: 45px;
       height: 45px;
       border: 2px solid var(--bs-border-color);
+
       i {
         transform: scale(1);
         color: var(--bs-body-color);
       }
+
       &.active {
         flex: none;
         border-color: var(--bs-primary);

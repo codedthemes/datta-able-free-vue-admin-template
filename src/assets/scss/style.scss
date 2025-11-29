@@ -137,15 +137,9 @@ File: style.css
 @import 'themes/pages/admin';
 
 // custom plugins
-@import 'themes/plugins/sweatalert';
 @import 'themes/plugins/lightbox';
-@import 'themes/plugins/notification';
-@import 'themes/plugins/modal';
-@import 'themes/plugins/rangeslider';
-@import 'themes/plugins/daterange';
-@import 'themes/plugins/tags-input';
-@import 'themes/plugins/slider';
-@import 'themes/plugins/switches';
+@import 'themes/plugins/apexchart';
 @import 'themes/plugins/data-tables';
+@import 'themes/plugins/scrollbar';
 
 @import 'themes/layouts/customizer';

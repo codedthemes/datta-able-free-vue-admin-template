@@ -6,11 +6,11 @@ import { BContainer, BRow, BCol } from 'bootstrap-vue-next'
 <template>
   <footer class="pc-footer">
     <BContainer class="footer-wrapper" fluid>
-      <BRow>
-        <BCol class="footer-title my-1">
+      <BRow class="justify-content-center justify-content-md-between">
+        <BCol cols="auto" class="footer-title my-1">
           <p class="m-0">
             Datta able &#9829; crafted by Team
-            <a href="https://codedthemes.com/" target="_blank">CodedThemes</a>
+            <a href="https://codedthemes.com/" class="text-primary" target="_blank">CodedThemes</a>
           </p>
         </BCol>
         <BCol cols="auto" class="my-1">

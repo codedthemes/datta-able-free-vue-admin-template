@@ -1,0 +1,63 @@
+.apexcharts-legend-series {
+  gap: 8px;
+}
+
+/* @override - margin bottom depends on marker size in tooltip */
+.apexcharts-tooltip-marker {
+  margin-bottom: 2px !important;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active,
+.apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 0 !important;
+}
+
+.apexcharts-menu-icon svg,
+.apexcharts-reset-icon svg,
+.apexcharts-zoom-icon svg,
+.apexcharts-zoomin-icon svg,
+.apexcharts-zoomout-icon svg {
+  fill: var(--bs-secondary) !important;
+}
+
+.apexcharts-pan-icon svg {
+  stroke: var(--bs-secondary) !important;
+  fill: transparent !important;
+}
+
+.apexcharts-zoom-icon.apexcharts-selected svg {
+  fill: var(--bs-primary) !important;
+}
+
+.apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: var(--bs-primary) !important;
+}
+
+.apexcharts-toolbar .apexcharts-pan-icon:hover:not(.apexcharts-selected) svg {
+  stroke: var(--bs-gray-900) !important;
+}
+
+.apexcharts-toolbar div:hover:not(.apexcharts-selected):not(.apexcharts-pan-icon) svg {
+  fill: var(--bs-gray-900) !important;
+}
+
+.apexcharts-canvas .apexcharts-svg {
+  background: transparent !important;
+}
+
+.tooltip-icon-alignment {
+  .apexcharts-tooltip-marker {
+    height: 18px;
+    width: 18px;
+    font-size: 18px;
+  }
+}
+
+.apexcharts-theme-dark {
+  .apexcharts-toolbar div:hover:not(.apexcharts-selected):not(.apexcharts-pan-icon) svg {
+    fill: #fff !important;
+  }
+  .apexcharts-toolbar .apexcharts-pan-icon:hover:not(.apexcharts-selected) svg {
+    stroke: #fff !important;
+  }
+}

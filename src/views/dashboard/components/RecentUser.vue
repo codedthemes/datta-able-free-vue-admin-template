@@ -43,8 +43,8 @@ const users = [
 </script>
 
 <template>
-  <CardHeader title="Recent Users" class="Recent-Users" body-class="px-0 py-3">
-    <BTableSimple responsive hover>
+  <CardHeader title="Recent Users" class="Recent-Users" body-class="px-0 py-0 table-body">
+    <BTableSimple class="mb-0" responsive hover>
       <BTbody>
         <BTr v-for="(user, index) in users" :key="index" class="unread">
           <BTd>
