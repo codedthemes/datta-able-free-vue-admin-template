@@ -2,6 +2,7 @@
   admin css start
 ==========================  **/
 @use 'sass:color';
+
 .widget-calender {
   .datepicker-header {
     border-bottom: 1px solid var(--bs-border-color);
@@ -113,6 +114,20 @@
         background: var(--bs-primary);
         border-color: var(--bs-primary);
         color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .course-wizard {
+    .nav-item {
+      .nav-link {
+        min-width: 60px;
+
+        .course-wizard-num {
+          margin: 0 !important;
+        }
       }
     }
   }

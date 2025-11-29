@@ -8,6 +8,8 @@ File: style.css
 =================================================================================== */
 
 // main framework
+@use 'sass:color';
+
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 @import 'settings/color-variables';
@@ -65,12 +67,11 @@ section {
 
   &.top-nav-collapse.default {
     padding: 26px 0;
+    box-shadow: none;
 
-    @include media-breakpoint-up(md) {
+    @media (min-width: 776px) {
       background: transparent !important;
     }
-
-    box-shadow: none;
   }
 
   &.default,
@@ -506,6 +507,7 @@ header {
   section {
     padding: 40px 0;
   }
+
   .call-to-action .cta-block .gift-icon {
     display: none;
   }
@@ -545,8 +547,8 @@ header {
     background: $dark-layout-color;
 
     .bg-white {
-      background: lighten($dark-layout-color, 4%) !important;
-      --bs-white: lighten($dark-layout-color, 4%);
+      background: #{color.adjust($dark-layout-color, $lightness: 4%)} !important;
+      --bs-white: #{color.adjust($dark-layout-color, $lightness: 4%)};
     }
   }
 

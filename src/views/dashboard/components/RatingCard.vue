@@ -34,8 +34,9 @@ const ratingData = ref([
     </BRow>
     <BRow>
       <BCol xl="12" v-for="(item, index) in ratingData" :key="index">
-        <h6 class="align-items-center float-start">
-          <i class="ti ti-star-filled f-12 m-r-10 text-warning"></i>{{ item.star }}
+        <h6 class="d-flex align-items-center gap-1 float-start">
+          <i class="ti ti-star-filled f-12 text-warning"></i>
+          {{ item.star }}
         </h6>
         <h6 class="align-items-center float-end">{{ item.count }}</h6>
         <BProgress

@@ -3,6 +3,7 @@
 // ============================
 @use 'sass:map';
 @use 'sass:color';
+
 .b-brand {
   display: flex;
   align-items: center;
@@ -18,6 +19,7 @@
     svg {
       stroke: #fff;
     }
+
     i {
       color: #fff;
     }
@@ -177,6 +179,7 @@
 
     .pc-submenu {
       padding: 15px 0;
+
       .pc-item {
         > .pc-link {
           &:after {
@@ -357,9 +360,11 @@
     display: none;
   }
 }
+
 [data-pc-navimg*='preset-'] {
   .pc-sidebar {
     background-size: cover;
+
     .navbar-wrapper {
       background: rgba(0, 0, 0, 0.5);
     }
@@ -386,6 +391,7 @@
           top: 6px;
           opacity: 0;
         }
+
         &.active,
         &:hover {
           > .pc-link:after {
@@ -396,6 +402,7 @@
     }
   }
 }
+
 @media (min-width: 1025px) {
   .navbar-overlay {
     .pc-sidebar {
@@ -521,6 +528,7 @@
       &:focus,
       &:hover {
         color: var(--pc-header-color);
+
         > svg,
         > i {
           color: var(--pc-header-color);
@@ -587,6 +595,7 @@
         .breadcrumb-item,
         a {
           color: #fff;
+
           &:active,
           &:focus,
           &:hover {

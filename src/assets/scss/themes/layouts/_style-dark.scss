@@ -50,6 +50,7 @@
 .card {
   --bs-card-bg: #{color.adjust($dark-layout-color, $lightness: 4%)};
   --bs-card-border-color: #{color.adjust($dark-layout-color, $lightness: 10%)};
+
   &[class*='bg-'] {
     --bs-card-border-color: rgba(255, 255, 255, 0.5);
   }
@@ -66,6 +67,7 @@
 
 .list-group {
   --bs-list-group-bg: transparent;
+  --bs-list-group-action-color: var(--pc-heading-color);
   --bs-list-group-border-color: #{color.adjust($dark-layout-color, $lightness: 7%)};
   --bs-list-group-disabled-bg: #{color.adjust($dark-layout-color, $lightness: 2%)};
   --bs-list-group-action-hover-bg: #{color.adjust($dark-layout-color, $lightness: 5%)};
@@ -147,6 +149,7 @@
 
   &.btn-close-white {
     filter: none;
+    background-color: #000;
   }
 }
 
@@ -277,6 +280,18 @@ select.datatable-input,
 
       .alert-link {
         color: var(--bs-body-color);
+      }
+    }
+  }
+
+  .img-thumbnail.bg-white {
+    background: var(--bs-body-bg) !important;
+  }
+
+  .user-card {
+    .user-about-block {
+      img {
+        background: var(--bs-card-bg);
       }
     }
   }
@@ -541,6 +556,7 @@ select.datatable-input,
       background: var(--bs-body-bg);
       color: var(--bs-body-color);
     }
+
     .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
       border-color: var(--bs-border-color);
     }
@@ -797,6 +813,16 @@ select.datatable-input,
   background: #{color.adjust($dark-layout-color, $lightness: 15%)};
 }
 
+.footer-bg {
+  tr {
+    td {
+      color: var(--bs-body-color);
+      background: #{color.adjust($dark-layout-color, $lightness: 15%)};
+      border-color: #{color.adjust($dark-layout-color, $lightness: 15%)};
+    }
+  }
+}
+
 .datatable-table,
 .table {
   --bs-table-color: var(--bs-body-color);
@@ -919,68 +945,6 @@ table.datatable > tbody > tr.child ul.dtr-details > li {
   }
 }
 
-.apexcharts-legend-text {
-  color: var(--bs-body-color) !important;
-}
-
-text {
-  fill: rgba(255, 255, 255, 0.8) !important;
-}
-
-.apexcharts-datalabels,
-.apexcharts-data-labels {
-  text {
-    fill: #fff !important;
-  }
-}
-
-.apexcharts-radialbar-hollow {
-  fill: #{color.adjust($dark-layout-color, $lightness: 4%)};
-}
-
-.apexcharts-canvas line {
-  stroke: transparent !important;
-}
-.apexcharts-menu {
-  background: var(--bs-body-bg);
-  border-color: #{color.adjust($dark-layout-color, $lightness: 15%)};
-}
-.apexcharts-theme-light {
-  .apexcharts-menu-item {
-    &:hover {
-      background: var(--bs-card-bg);
-    }
-  }
-  .apexcharts-menu-icon:hover svg,
-  .apexcharts-reset-icon:hover svg,
-  .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
-  .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
-  .apexcharts-zoomin-icon:hover svg,
-  .apexcharts-zoomout-icon:hover svg {
-    fill: var(--bs-body-color);
-  }
-}
-.apexcharts-tooltip.apexcharts-theme-light {
-  background: var(--bs-body-bg);
-  border-color: #{color.adjust($dark-layout-color, $lightness: 15%)};
-
-  .apexcharts-tooltip-title {
-    background: var(--bs-body-bg);
-    border-bottom-color: #{color.adjust($dark-layout-color, $lightness: 15%)};
-  }
-}
-.apexcharts-xaxistooltip,
-.apexcharts-yaxistooltip {
-  background: var(--bs-body-bg);
-  border-color: #{color.adjust($dark-layout-color, $lightness: 15%)};
-  color: var(--bs-body-color);
-}
-.apexcharts-xaxistooltip-bottom {
-  &::after,
-  &::before {
-    border-bottom-color: var(--bs-body-bg);
-  }
-}
 .fc .fc-list-sticky .fc-list-day>*,
 .fc .fc-scrollgrid-section-sticky>*,
 // .auth-main .auth-wrapper.v3,

@@ -265,6 +265,7 @@ $position-values: (
 body {
   font-feature-settings: 'salt';
 }
+
 $body-bg: #f4f7fa; // change
 $body-color: #888; // change
 $body-text-align: null;
@@ -888,14 +889,14 @@ $form-validation-states: (
 // of components dependent on the z-axis and are designed to all work together.
 
 // scss-docs-start zindex-stack
-$zindex-dropdown: 1026;
+$zindex-dropdown: 1024;
 $zindex-sticky: 1020;
 $zindex-fixed: 1030;
 $zindex-offcanvas-backdrop: 1040;
 $zindex-offcanvas: 1045;
 $zindex-modal-backdrop: 1050;
 $zindex-modal: 1055;
-$zindex-popover: 1070;
+$zindex-popover: 1025;
 $zindex-tooltip: 1081;
 $zindex-toast: 1090;
 // scss-docs-end zindex-stack
