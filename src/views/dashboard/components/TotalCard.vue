@@ -23,7 +23,7 @@ import { BCard, BCardBody, BRow, BCol } from 'bootstrap-vue-next'
         </BCol>
         <BCol>
           <h3 class="f-w-300">26</h3>
-          <span class="d-block text-uppercase">total locations</span>
+          <span class="d-block text-uppercase">total location</span>
         </BCol>
       </BRow>
     </BCardBody>

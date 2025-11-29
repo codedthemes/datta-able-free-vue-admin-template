@@ -2,6 +2,7 @@
 //     RTL css start
 // ============================
 @use 'sass:map';
+
 $i: 0;
 
 @while $i<=50 {
@@ -83,9 +84,46 @@ dd {
   }
 }
 
+.user-card {
+  .change-profile {
+    .profile-dp {
+      .overlay {
+        span {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
 .apexcharts-canvas {
   direction: ltr;
   text-align: left;
+}
+
+.border-start {
+  border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  border-left: none !important;
+}
+
+figure {
+  &.effect-moses {
+    h2 {
+      text-align: right;
+      transform: translate3d(-10px, 10px, 0);
+    }
+    p {
+      float: left;
+      text-align: left;
+      transform: translate3d(50%, -50%, 0);
+    }
+    &:hover {
+      p,
+      h2 {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
 }
 
 .dropdown-menu {
@@ -193,7 +231,7 @@ dd {
 
       &:after {
         left: auto;
-        right: 45px;
+        right: 28px;
       }
     }
 
@@ -208,7 +246,7 @@ dd {
 
         &:after {
           left: auto;
-          right: 62px;
+          right: 46px;
         }
       }
 
@@ -821,15 +859,7 @@ div.dt-container {
 }
 
 .chat-wrapper {
-  .chat-user_list {
-    margin-right: 0;
-    margin-left: var(--bs-gutter-x);
-  }
-
   .chat-user_info {
-    margin-right: var(--bs-gutter-x);
-    margin-left: 0;
-
     .justify-content-start {
       justify-content: flex-start !important;
     }

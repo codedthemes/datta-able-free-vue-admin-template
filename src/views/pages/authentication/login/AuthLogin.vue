@@ -3,7 +3,14 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 
 // third party
-import { BForm, BFormGroup, BFormInput, BFormCheckbox, BButton } from 'bootstrap-vue-next'
+import {
+  BForm,
+  BFormGroup,
+  BFormInput,
+  BFormCheckbox,
+  BButton,
+  BInputGroup,
+} from 'bootstrap-vue-next'
 
 const router = useRouter()
 const status = ref(true)
@@ -24,8 +31,14 @@ const emailError = computed(() => {
 const passwordError = computed(() => {
   if (!password.value) return 'Password is required'
   if (password.value.length > 10) return 'Password must be less than 10 characters'
+  if (password.value !== 'admin123') return 'Invalid password'
   return ''
 })
+const showPassword = ref(false)
+
+const togglePassword = () => {
+  showPassword.value = !showPassword.value
+}
 
 // Computed validation states
 const isEmailValid = computed(() => !emailError.value)
@@ -47,7 +60,16 @@ const handleSubmit = () => {
       <BFormInput type="email" v-model="email" placeholder="Email Address" />
     </BFormGroup>
     <BFormGroup :state="isPasswordValid" :invalid-feedback="passwordError" class="mb-3">
-      <BFormInput type="password" v-model="password" placeholder="Password" />
+      <BInputGroup size="sm">
+        <BFormInput
+          v-model="password"
+          :type="showPassword ? 'text' : 'password'"
+          placeholder="Password"
+        />
+        <BButton variant="primary" @click="togglePassword">
+          <i :class="showPassword ? 'ti ti-eye' : 'ti ti-eye-off'"></i>
+        </BButton>
+      </BInputGroup>
     </BFormGroup>
     <div class="d-flex mt-1 justify-content-between align-items-center">
       <BFormCheckbox id="customCheck1" v-model="status" name="customCheck1" class="text-muted mb-0">

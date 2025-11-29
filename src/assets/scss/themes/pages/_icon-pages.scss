@@ -28,6 +28,14 @@
       position: absolute;
       bottom: 0;
       right: 0;
+
+      &.center {
+        top: 0;
+        left: 50%;
+        bottom: auto;
+        right: auto;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }

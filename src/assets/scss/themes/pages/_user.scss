@@ -64,6 +64,7 @@
 
     img {
       box-shadow: 0 0 0 5px var(--bs-card-bg);
+      background: var(--bs-white);
     }
 
     .certificated-badge {
@@ -74,7 +75,7 @@
       width: 30px;
       height: 30px;
       background: var(--bs-card-bg);
-      padding: 5px 3px;
+      padding: 3px;
 
       .bg-icon {
         font-size: 22px;
@@ -168,10 +169,6 @@
     .change-profile .profile-dp {
       width: 90px;
       height: 90px;
-    }
-
-    &.user-card-2.shape-right .cover-img-block {
-      clip-path: none;
     }
 
     .cover-img-block {
@@ -272,6 +269,11 @@
   margin-top: -20px;
   margin-left: -40px;
   margin-right: -40px;
+
+  @media only screen and (max-width: 1024px) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 
   .card-body {
     position: relative;
@@ -381,7 +383,6 @@
           left: auto;
           display: flex;
           align-items: center;
-          justify-content: center;
 
           .btn {
             margin: 0 3px;
@@ -587,7 +588,6 @@
   }
 
   p {
-    font-size: 18px;
     font-weight: 300;
   }
 
@@ -617,6 +617,7 @@
 .skill-mlt-select + .select2-container {
   display: block;
 }
+
 /**  =====================
   24. User card css end
 ==========================  **/
