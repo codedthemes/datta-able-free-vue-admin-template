@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
+import { storeToRefs } from "pinia";
 
 // files
-import { useUIStore } from '@/stores/ui'
+import { useUIStore } from "@/stores/ui";
 
-const uiStore = useUIStore()
-const { isLoading } = storeToRefs(uiStore)
+const uiStore = useUIStore();
+const { isLoading } = storeToRefs(uiStore);
 </script>
 
 <template>

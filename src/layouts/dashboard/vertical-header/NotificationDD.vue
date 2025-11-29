@@ -1,7 +1,12 @@
 <script setup lang="ts">
 // third party
-import { BDropdown, BDropdownHeader, BDropdownText, BCard } from 'bootstrap-vue-next'
-import SimpleBar from 'simplebar-vue'
+import {
+  BDropdown,
+  BDropdownHeader,
+  BDropdownText,
+  BCard,
+} from "bootstrap-vue-next";
+import SimpleBar from "simplebar-vue";
 </script>
 
 <template>
@@ -15,13 +20,20 @@ import SimpleBar from 'simplebar-vue'
       aria-label="Notification"
     >
       <template #button-content>
-        <a href="#" class="pc-head-link mx-0 position-static" aria-label="Notification">
+        <a
+          href="#"
+          class="pc-head-link mx-0 position-static"
+          aria-label="Notification"
+        >
           <i class="ph ph-bell"></i>
           <span class="badge bg-success pc-h-badge">3</span>
         </a>
         <span class="visually-hidden">Notification</span>
       </template>
-      <BDropdownHeader tag="h5" header-class="d-flex align-items-center justify-content-between">
+      <BDropdownHeader
+        tag="h5"
+        header-class="d-flex align-items-center justify-content-between"
+      >
         <h5 class="m-0">Notifications</h5>
         <a href="#!" class="btn btn-link btn-sm">Mark all read</a>
       </BDropdownHeader>
@@ -46,8 +58,9 @@ import SimpleBar from 'simplebar-vue'
                   <span class="float-end text-sm text-muted">2 min ago</span>
                   <h5 class="text-body mb-2">UI/UX Design</h5>
                   <p class="mb-0">
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type
                   </p>
                 </div>
               </div>
@@ -67,7 +80,8 @@ import SimpleBar from 'simplebar-vue'
                   <span class="float-end text-sm text-muted">1 hour ago</span>
                   <h5 class="text-body mb-2">Message</h5>
                   <p class="mb-0">
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500.
                   </p>
                 </div>
               </div>
@@ -88,8 +102,9 @@ import SimpleBar from 'simplebar-vue'
                   <span class="float-end text-sm text-muted">2 hour ago</span>
                   <h5 class="text-body mb-2">Forms</h5>
                   <p class="mb-0">
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type
                   </p>
                 </div>
               </div>
@@ -109,9 +124,12 @@ import SimpleBar from 'simplebar-vue'
                   <span class="float-end text-sm text-muted">12 hour ago</span>
                   <h5 class="text-body mb-2">Challenge invitation</h5>
                   <p class="mb-2">
-                    <span class="text-dark">Jonny aber</span> invites to join the challenge
+                    <span class="text-dark">Jonny aber</span> invites to join
+                    the challenge
                   </p>
-                  <button class="btn btn-sm btn-outline-secondary me-2">Decline</button>
+                  <button class="btn btn-sm btn-outline-secondary me-2">
+                    Decline
+                  </button>
                   <button class="btn btn-sm btn-primary">Accept</button>
                 </div>
               </div>
@@ -131,8 +149,9 @@ import SimpleBar from 'simplebar-vue'
                   <span class="float-end text-sm text-muted">5 hour ago</span>
                   <h5 class="text-body mb-2">Security</h5>
                   <p class="mb-0">
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type
                   </p>
                 </div>
               </div>

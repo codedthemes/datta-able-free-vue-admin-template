@@ -10,22 +10,23 @@
  *
  */
 
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
 const props = defineProps({
   name: String,
-})
+});
 
-const spritePath = ref<string | null>(null)
+const spritePath = ref<string | null>(null);
 
 onMounted(async () => {
   try {
     // Load the SVG sprite dynamically with an absolute path
-    spritePath.value = (await import.meta.env.BASE_URL) + 'assets/svg/sprite.svg'
+    spritePath.value =
+      (await import.meta.env.BASE_URL) + "assets/svg/sprite.svg";
   } catch (error) {
-    console.error('Error loading SVG sprite:', error)
+    console.error("Error loading SVG sprite:", error);
   }
-})
+});
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 export type ConfigProps = {
-  sidebarCollapse: boolean
-}
+  sidebarCollapse: boolean;
+};
 
 const config: ConfigProps = {
   sidebarCollapse: true,
-}
+};
 
-export default config
+export default config;

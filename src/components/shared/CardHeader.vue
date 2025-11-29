@@ -10,12 +10,12 @@
  */
 
 // third party
-import { BCard } from 'bootstrap-vue-next'
+import { BCard } from "bootstrap-vue-next";
 
 const props = defineProps({
   title: String,
   caption: String,
-})
+});
 </script>
 
 <template>
