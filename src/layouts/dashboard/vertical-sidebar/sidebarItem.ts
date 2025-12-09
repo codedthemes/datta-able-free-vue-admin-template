@@ -1,126 +1,126 @@
 export interface menu {
-  header?: string
-  title?: string
-  icon?: string
-  to?: string
-  getURL?: boolean
-  chip?: string
-  chipIcon?: string
-  children?: menu[]
-  type?: string
+  header?: string;
+  title?: string;
+  icon?: string;
+  to?: string;
+  getURL?: boolean;
+  chip?: string;
+  chipIcon?: string;
+  children?: menu[];
+  type?: string;
 }
 
 const sidebarItem: menu[] = [
-  { header: 'Navigation' },
+  { header: "Navigation" },
   {
-    title: 'Dashboard',
-    icon: 'ph-house-line',
-    to: '/',
+    title: "Dashboard",
+    icon: "ph-house-line",
+    to: "/",
   },
-  { header: 'Ui Components' },
+  { header: "Ui Components" },
   {
-    title: 'Color',
-    icon: 'ph-palette',
-    to: '/color',
-  },
-  {
-    title: 'Typography',
-    icon: 'ph-text-t',
-    to: '/typography',
+    title: "Color",
+    icon: "ph-palette",
+    to: "/color",
   },
   {
-    title: 'Icons',
-    icon: 'ph-feather',
-    to: '#',
+    title: "Typography",
+    icon: "ph-text-t",
+    to: "/typography",
+  },
+  {
+    title: "Icons",
+    icon: "ph-feather",
+    to: "#",
     children: [
       {
-        title: 'Tabler',
-        to: 'https://tabler.io/icons',
+        title: "Tabler",
+        to: "https://tabler.io/icons",
         getURL: true,
-        type: 'external',
+        type: "external",
       },
       {
-        title: 'Phosphor',
-        to: 'https://phosphoricons.com/',
-        type: 'external',
+        title: "Phosphor",
+        to: "https://phosphoricons.com/",
+        type: "external",
         getURL: true,
       },
     ],
   },
-  { header: 'Pages' },
+  { header: "Pages" },
   {
-    title: 'Login',
-    icon: 'ph-lock',
-    to: '/login',
-    type: 'external',
+    title: "Login",
+    icon: "ph-lock",
+    to: "/login",
+    type: "external",
   },
   {
-    title: 'Register',
-    icon: 'ph-user-plus',
-    to: '/register',
-    type: 'external',
+    title: "Register",
+    icon: "ph-user-plus",
+    to: "/register",
+    type: "external",
   },
-  { header: 'Other' },
+  { header: "Other" },
   {
-    title: 'Menu levels',
-    icon: 'ph-tree-structure',
-    to: '#',
+    title: "Menu levels",
+    icon: "ph-tree-structure",
+    to: "#",
     children: [
       {
-        title: 'Level 2.1',
-        to: '#',
+        title: "Level 2.1",
+        to: "#",
       },
       {
-        title: 'Level 2.2',
-        to: '',
+        title: "Level 2.2",
+        to: "",
         children: [
           {
-            title: 'Level 3.1',
-            to: '#',
+            title: "Level 3.1",
+            to: "#",
           },
           {
-            title: 'Level 3.2',
-            to: '#',
+            title: "Level 3.2",
+            to: "#",
           },
           {
-            title: 'Level 3.3',
-            to: '#',
+            title: "Level 3.3",
+            to: "#",
             children: [
               {
-                title: 'Level 4.1',
-                to: '#',
+                title: "Level 4.1",
+                to: "#",
               },
               {
-                title: 'Level 4.2',
-                to: '#',
+                title: "Level 4.2",
+                to: "#",
               },
             ],
           },
         ],
       },
       {
-        title: 'Level 2.3',
-        to: '',
+        title: "Level 2.3",
+        to: "",
         children: [
           {
-            title: 'Level 3.1',
-            to: '#',
+            title: "Level 3.1",
+            to: "#",
           },
           {
-            title: 'Level 3.2',
-            to: '#',
+            title: "Level 3.2",
+            to: "#",
           },
           {
-            title: 'Level 3.3',
-            to: '#',
+            title: "Level 3.3",
+            to: "#",
             children: [
               {
-                title: 'Level 4.1',
-                to: '#',
+                title: "Level 4.1",
+                to: "#",
               },
               {
-                title: 'Level 4.2',
-                to: '#',
+                title: "Level 4.2",
+                to: "#",
               },
             ],
           },
@@ -129,10 +129,10 @@ const sidebarItem: menu[] = [
     ],
   },
   {
-    title: 'Sample Page',
-    icon: 'ph-desktop',
-    to: '/sample-page',
+    title: "Sample Page",
+    icon: "ph-desktop",
+    to: "/sample-page",
   },
-]
+];
 
-export default sidebarItem
+export default sidebarItem;

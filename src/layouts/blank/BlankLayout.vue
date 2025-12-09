@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView } from "vue-router";
 
 // components
-import LoaderWrapper from '../LoaderWrapper.vue'
+import LoaderWrapper from "../LoaderWrapper.vue";
 </script>
 
 <template>

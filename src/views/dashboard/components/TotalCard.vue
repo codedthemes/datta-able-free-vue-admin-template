@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // third party
-import { BCard, BCardBody, BRow, BCol } from 'bootstrap-vue-next'
+import { BCard, BCardBody, BRow, BCol } from "bootstrap-vue-next";
 </script>
 
 <template>

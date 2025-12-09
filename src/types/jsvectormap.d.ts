@@ -1,1 +1,1 @@
-declare module 'jsvectormap'
+declare module "jsvectormap";

@@ -1,16 +1,16 @@
 <script setup lang="ts">
 // third party
-import { BRow, BCol, BProgress, BProgressBar, BCard } from 'bootstrap-vue-next'
+import { BRow, BCol, BProgress, BProgressBar, BCard } from "bootstrap-vue-next";
 
 const props = defineProps<{
-  title: string
-  icon: string
-  iconVariant: string
-  sales: string
-  percent: number
-  progressValue: number
-  progressClass?: string
-}>()
+  title: string;
+  icon: string;
+  iconVariant: string;
+  sales: string;
+  percent: number;
+  progressValue: number;
+  progressClass?: string;
+}>();
 </script>
 
 <template>

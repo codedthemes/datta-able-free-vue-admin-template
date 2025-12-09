@@ -9,10 +9,10 @@
  */
 
 // third party
-import { BCard, BImg } from 'bootstrap-vue-next'
+import { BCard, BImg } from "bootstrap-vue-next";
 
 // assets
-import darkLight from '@/assets/images/logo-dark.svg'
+import darkLight from "@/assets/images/logo-dark.svg";
 </script>
 
 <template>

@@ -11,23 +11,23 @@
  * @computed {BreadcrumbItem[]} computedBreadcrumbs - Ensures the Home link is always included before rendering the breadcrumb list.
  */
 
-import { computed } from 'vue'
+import { computed } from "vue";
 
 // third party
-import { BBreadcrumb, BRow, BCol } from 'bootstrap-vue-next'
-import { type BreadcrumbItem } from 'bootstrap-vue-next'
+import { BBreadcrumb, BRow, BCol } from "bootstrap-vue-next";
+import { type BreadcrumbItem } from "bootstrap-vue-next";
 
 // Define Props
 const props = defineProps<{
-  title: string
-  breadcrumbs: BreadcrumbItem[]
-}>()
+  title: string;
+  breadcrumbs: BreadcrumbItem[];
+}>();
 
 // Ensure Home link is always present
 const computedBreadcrumbs = computed<BreadcrumbItem[]>(() => [
-  { text: 'Home', to: '/' },
+  { text: "Home", to: "/" },
   ...props.breadcrumbs,
-])
+]);
 </script>
 
 <template>

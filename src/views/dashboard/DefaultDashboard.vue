@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { ref, shallowRef } from 'vue'
+import { ref, shallowRef } from "vue";
 
 // third party
-import { BRow, BCol } from 'bootstrap-vue-next'
+import { BRow, BCol } from "bootstrap-vue-next";
 
 // common components
-import BaseBreadcrumb from '@/components/shared/BaseBreadcrumb.vue'
-import CardHeader from '@/components/shared/CardHeader.vue'
+import BaseBreadcrumb from "@/components/shared/BaseBreadcrumb.vue";
+import CardHeader from "@/components/shared/CardHeader.vue";
 
-import ProgressSalesCard from '@/views/dashboard/components/ProgressSalesCard.vue'
-import WorldMap from '@/views/dashboard/components/WorldMap.vue'
-import EarningChart from '@/views/dashboard/components/EarningChart.vue'
-import TotalCard from '@/views/dashboard/components/TotalCard.vue'
-import SocialLikeCard from '@/views/dashboard/components/SocialLikeCard.vue'
-import RatingCard from '@/views/dashboard/components/RatingCard.vue'
-import RecentUser from '@/views/dashboard/components/RecentUser.vue'
+import ProgressSalesCard from "@/views/dashboard/components/ProgressSalesCard.vue";
+import WorldMap from "@/views/dashboard/components/WorldMap.vue";
+import EarningChart from "@/views/dashboard/components/EarningChart.vue";
+import TotalCard from "@/views/dashboard/components/TotalCard.vue";
+import SocialLikeCard from "@/views/dashboard/components/SocialLikeCard.vue";
+import RatingCard from "@/views/dashboard/components/RatingCard.vue";
+import RecentUser from "@/views/dashboard/components/RecentUser.vue";
 
-const page = ref({ title: 'Home' })
-const breadcrumbs = shallowRef([{ text: 'Dashboard' }, { text: 'Home' }])
+const page = ref({ title: "Home" });
+const breadcrumbs = shallowRef([{ text: "Dashboard" }, { text: "Home" }]);
 </script>
 
 <template>

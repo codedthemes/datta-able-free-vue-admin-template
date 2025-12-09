@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // third party
-import { BDropdown } from 'bootstrap-vue-next'
+import { BDropdown } from "bootstrap-vue-next";
 </script>
 
 <template>
@@ -15,7 +15,8 @@ import { BDropdown } from 'bootstrap-vue-next'
       aria-label="Search"
     >
       <template #button-content>
-        <i class="ph ph-magnifying-glass"></i><span class="visually-hidden">Search</span>
+        <i class="ph ph-magnifying-glass"></i
+        ><span class="visually-hidden">Search</span>
       </template>
       <!-- todo: Use <form> instead of <BDropdownForm> due to styling issues -->
       <form class="px-3 py-2">

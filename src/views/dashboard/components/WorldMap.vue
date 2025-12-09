@@ -1,30 +1,30 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 // third party
-import jsVectorMap from 'jsvectormap'
-import 'jsvectormap/dist/maps/world'
-import 'jsvectormap/src/scss/jsvectormap.scss'
+import jsVectorMap from "jsvectormap";
+import "jsvectormap/dist/maps/world";
+import "jsvectormap/src/scss/jsvectormap.scss";
 
 // map setup
-const mapWorld = ref<HTMLElement | null>(null)
+const mapWorld = ref<HTMLElement | null>(null);
 interface JsVectorMapInstance {
-  destroy: () => void
-  updateSize: () => void
+  destroy: () => void;
+  updateSize: () => void;
 }
 
-let mapInstance: JsVectorMapInstance | null = null
+let mapInstance: JsVectorMapInstance | null = null;
 
 const resizeHandler = () => {
-  mapInstance?.updateSize()
-}
+  mapInstance?.updateSize();
+};
 
 onMounted(() => {
   if (mapWorld.value) {
-    mapWorld.value.id = 'map-world'
+    mapWorld.value.id = "map-world";
     mapInstance = new jsVectorMap({
-      selector: '#map-world',
-      map: 'world',
+      selector: "#map-world",
+      map: "world",
       zoomButtons: true,
       markersSelectable: true,
       markers: [
@@ -43,10 +43,10 @@ onMounted(() => {
       ],
       markerStyle: {
         initial: {
-          fill: '#3f4d67',
+          fill: "#3f4d67",
         },
         hover: {
-          fill: '#04a9f5',
+          fill: "#04a9f5",
         },
       },
       markerLabelStyle: {
@@ -54,20 +54,20 @@ onMounted(() => {
           fontFamily: "'Inter', sans-serif",
           fontSize: 13,
           fontWeight: 500,
-          fill: '#3f4d67',
+          fill: "#3f4d67",
         },
       },
       // You can customize more options here
-    })
+    });
     // Listen for window resize
-    window.addEventListener('resize', resizeHandler)
+    window.addEventListener("resize", resizeHandler);
   }
-})
+});
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', resizeHandler)
-  mapInstance?.destroy()
-})
+  window.removeEventListener("resize", resizeHandler);
+  mapInstance?.destroy();
+});
 </script>
 
 <template>
