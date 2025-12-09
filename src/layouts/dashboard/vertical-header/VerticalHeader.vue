@@ -1,27 +1,30 @@
 <script setup lang="ts">
 // components
-import Searchbar from './SearchBar.vue'
-import NotificationDD from './NotificationDD.vue'
-import ProfileDD from './ProfileDD.vue'
+import Searchbar from "./SearchBar.vue";
+import NotificationDD from "./NotificationDD.vue";
+import ProfileDD from "./ProfileDD.vue";
 
 const ToggleSidebar = () => {
-  document.querySelector('.pc-sidebar')?.classList.toggle('pc-sidebar-hide')
-}
+  document.querySelector(".pc-sidebar")?.classList.toggle("pc-sidebar-hide");
+};
 
 const MobileToggleSidebar = () => {
-  const sidebar = document.querySelector('.pc-sidebar')
-  sidebar?.classList.toggle('mob-sidebar-active')
+  const sidebar = document.querySelector(".pc-sidebar");
+  sidebar?.classList.toggle("mob-sidebar-active");
 
-  sidebar?.insertAdjacentHTML('beforeend', '<div class="pc-menu-overlay"></div>')
+  sidebar?.insertAdjacentHTML(
+    "beforeend",
+    '<div class="pc-menu-overlay"></div>',
+  );
 
-  const overlay = document.querySelector('.pc-menu-overlay')
+  const overlay = document.querySelector(".pc-menu-overlay");
   if (overlay) {
-    overlay.addEventListener('click', () => {
-      sidebar?.classList.remove('mob-sidebar-active')
-      overlay.remove()
-    })
+    overlay.addEventListener("click", () => {
+      sidebar?.classList.remove("mob-sidebar-active");
+      overlay.remove();
+    });
   }
-}
+};
 </script>
 
 <template>

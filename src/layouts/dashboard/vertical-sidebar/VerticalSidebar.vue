@@ -1,39 +1,39 @@
 <script setup lang="ts">
-import { shallowRef, ref, onMounted, onBeforeUnmount } from 'vue'
+import { shallowRef, ref, onMounted, onBeforeUnmount } from "vue";
 
-import { BImg } from 'bootstrap-vue-next'
+import { BImg } from "bootstrap-vue-next";
 
 // third party
-import SimpleBar from 'simplebar-vue'
+import SimpleBar from "simplebar-vue";
 
 // files
-import sidebarItems from './sidebarItem'
+import sidebarItems from "./sidebarItem";
 
 // components
-import Logo from '../logo/LogoMain.vue'
-import NavGroup from './NavGroup/NavGroup.vue'
-import NavItem from './NavItem/NavItem.vue'
-import NavCollapse from './NavCollapse/NavCollapse.vue'
+import Logo from "../logo/LogoMain.vue";
+import NavGroup from "./NavGroup/NavGroup.vue";
+import NavItem from "./NavItem/NavItem.vue";
+import NavCollapse from "./NavCollapse/NavCollapse.vue";
 
-import couponImage from '@/assets/images/img-coupon.png'
+import couponImage from "@/assets/images/img-coupon.png";
 
-const isSmallScreen = ref(window.innerWidth <= 1024)
+const isSmallScreen = ref(window.innerWidth <= 1024);
 
 // Function to update screen size
 const updateScreenSize = () => {
-  isSmallScreen.value = window.innerWidth <= 1024
-}
+  isSmallScreen.value = window.innerWidth <= 1024;
+};
 
 onMounted(() => {
-  updateScreenSize()
-  window.addEventListener('resize', updateScreenSize)
-})
+  updateScreenSize();
+  window.addEventListener("resize", updateScreenSize);
+});
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', updateScreenSize)
-})
+  window.removeEventListener("resize", updateScreenSize);
+});
 
-const sidebarMenu = shallowRef(sidebarItems)
+const sidebarMenu = shallowRef(sidebarItems);
 </script>
 
 <template>
@@ -47,7 +47,11 @@ const sidebarMenu = shallowRef(sidebarItems)
             <!---Menu Loop -->
             <template v-for="(item, i) in sidebarMenu" :key="i">
               <!---Item Sub Header -->
-              <NavGroup :item="item" v-if="item.header" :key="item.title ?? i" />
+              <NavGroup
+                :item="item"
+                v-if="item.header"
+                :key="item.title ?? i"
+              />
               <!---If Has Child -->
               <NavCollapse :item="item" :level="0" v-else-if="item.children" />
               <!---Single Item-->

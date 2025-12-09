@@ -5,6 +5,9 @@
 [data-pc-layout='tab'] {
   .pc-sidebar {
     --bs-border-color: rgba(255, 255, 255, 0.2);
+    transition:
+      left 0.3s ease-in-out,
+      right 0.3s ease-in-out;
 
     .tab-container {
       display: flex;
@@ -77,6 +80,11 @@
       &:not(.mob-sidebar-active) {
         left: -#{$sidebar-tab-navbar-width};
       }
+
+      &.mob-sidebar-active {
+        left: 0;
+        z-index: 1050;
+      }
     }
   }
 
@@ -101,6 +109,12 @@
         &:not(.mob-sidebar-active) {
           left: 0;
           right: -#{$sidebar-tab-navbar-width};
+        }
+
+        &.mob-sidebar-active {
+          left: 0;
+          right: 0;
+          z-index: 1050;
         }
       }
 

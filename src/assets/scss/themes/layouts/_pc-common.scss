@@ -2,6 +2,7 @@
 //   6. Common layout css start
 // ============================
 @use 'sass:color';
+
 .pc-container {
   $temp: $header-height + 66;
   position: relative;

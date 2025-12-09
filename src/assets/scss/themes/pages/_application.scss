@@ -21,6 +21,7 @@
       align-items: center;
       @include media-breakpoint-down(sm) {
         padding: 0.8rem 0;
+        margin: 0 1rem 0 0;
       }
       i {
         font-size: 18px;
@@ -67,6 +68,14 @@
           width: 1%;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 575.99px) {
+  .user-details {
+    .border-start {
+      border-left: none !important;
     }
   }
 }

@@ -1,20 +1,27 @@
 <script setup lang="ts">
 // third party
-import { BCard, BCardBody, BRow, BCol, BProgress, BProgressBar } from 'bootstrap-vue-next'
+import {
+  BCard,
+  BCardBody,
+  BRow,
+  BCol,
+  BProgress,
+  BProgressBar,
+} from "bootstrap-vue-next";
 
 const props = defineProps<{
-  likes: string
-  icon: string
-  iconVariant: string
-  percent: string
-  percentClass?: string
-  target: string
-  targetProgress: number
-  targetProgressClass?: string
-  duration: string
-  durationProgress: number
-  durationProgressClass?: string
-}>()
+  likes: string;
+  icon: string;
+  iconVariant: string;
+  percent: string;
+  percentClass?: string;
+  target: string;
+  targetProgress: number;
+  targetProgressClass?: string;
+  duration: string;
+  durationProgress: number;
+  durationProgressClass?: string;
+}>();
 </script>
 
 <template>
@@ -41,7 +48,10 @@ const props = defineProps<{
             {{ props.target }}
           </h6>
           <BProgress height="6px" aria-label="target">
-            <BProgressBar :value="props.targetProgress" :class="`${props?.targetProgressClass}`" />
+            <BProgressBar
+              :value="props.targetProgress"
+              :class="`${props?.targetProgressClass}`"
+            />
           </BProgress>
         </BCol>
         <BCol cols="6">

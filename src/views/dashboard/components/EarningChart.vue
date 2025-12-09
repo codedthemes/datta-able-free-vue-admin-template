@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 
 // third party
-import { BCard } from 'bootstrap-vue-next'
+import { BCard } from "bootstrap-vue-next";
 
 const chartOptions = computed(() => {
   return {
     chart: {
-      type: 'line',
+      type: "line",
       height: 210,
       zoom: {
         enabled: false,
@@ -19,17 +19,17 @@ const chartOptions = computed(() => {
     dataLabels: {
       enabled: false,
     },
-    colors: ['#fff'],
+    colors: ["#fff"],
     fill: {
-      type: 'solid',
+      type: "solid",
     },
     plotOptions: {
       bar: {
-        columnWidth: '30%',
+        columnWidth: "30%",
       },
     },
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       axisBorder: {
         show: false,
       },
@@ -38,7 +38,7 @@ const chartOptions = computed(() => {
       },
       labels: {
         style: {
-          colors: '#fff',
+          colors: "#fff",
         },
       },
     },
@@ -74,7 +74,7 @@ const chartOptions = computed(() => {
     },
     markers: {
       size: 5,
-      colors: '#fff',
+      colors: "#fff",
       opacity: 0.9,
       strokeWidth: 2,
       hover: {
@@ -91,7 +91,7 @@ const chartOptions = computed(() => {
       y: {
         title: {
           formatter: function () {
-            return 'Statistics :'
+            return "Statistics :";
           },
         },
       },
@@ -99,8 +99,8 @@ const chartOptions = computed(() => {
         show: false,
       },
     },
-  }
-})
+  };
+});
 
 const lineChart = {
   series: [
@@ -108,11 +108,15 @@ const lineChart = {
       data: [10, 60, 45, 72, 45, 86],
     },
   ],
-}
+};
 </script>
 
 <template>
-  <BCard class="bg-primary overflow-hidden" header-class="border-0" body-class="py-0 p-x-25">
+  <BCard
+    class="bg-primary overflow-hidden"
+    header-class="border-0"
+    body-class="py-0 p-x-25"
+  >
     <template #header>
       <h5 class="text-white">Earnings</h5>
     </template>

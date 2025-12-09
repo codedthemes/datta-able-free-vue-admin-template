@@ -10,13 +10,13 @@
  */
 
 // third party
-import { BRow, BCol, BButton } from 'bootstrap-vue-next'
+import { BRow, BCol, BButton } from "bootstrap-vue-next";
 
 // Define Props with default values
 const props = defineProps({
   content: String,
   link: String,
-})
+});
 </script>
 
 <template>

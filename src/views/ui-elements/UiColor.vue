@@ -1,40 +1,40 @@
 <script setup lang="ts">
-import { ref, shallowRef } from 'vue'
+import { ref, shallowRef } from "vue";
 
 // third party
-import { BRow, BCol } from 'bootstrap-vue-next'
-import useClipboard from 'vue-clipboard3'
+import { BRow, BCol } from "bootstrap-vue-next";
+import useClipboard from "vue-clipboard3";
 
 // common components
-import BaseBreadcrumb from '@/components/shared/BaseBreadcrumb.vue'
-import CardHeader from '@/components/shared/CardHeader.vue'
-import ComponentContent from '@/components/shared/ComponentContent.vue'
+import BaseBreadcrumb from "@/components/shared/BaseBreadcrumb.vue";
+import CardHeader from "@/components/shared/CardHeader.vue";
+import ComponentContent from "@/components/shared/ComponentContent.vue";
 
-const page = ref({ title: 'Color' })
-const breadcrumbs = shallowRef([{ text: 'Basic UI' }, { text: 'Color' }])
+const page = ref({ title: "Color" });
+const breadcrumbs = shallowRef([{ text: "Basic UI" }, { text: "Color" }]);
 
-const shades = [100, 200, 300, 400, 500, 600, 700, 800, 900]
+const shades = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-const { toClipboard } = useClipboard() // Initialize vue-clipboard3
+const { toClipboard } = useClipboard(); // Initialize vue-clipboard3
 
 async function handleCopy(text: string, event: Event) {
   try {
-    await toClipboard(text)
-    showBadge(event.target as HTMLElement, 'Copied', 'bg-success')
+    await toClipboard(text);
+    showBadge(event.target as HTMLElement, "Copied", "bg-success");
   } catch {
-    showBadge(event.target as HTMLElement, 'Error', 'bg-danger')
+    showBadge(event.target as HTMLElement, "Error", "bg-danger");
   }
 }
 
 function showBadge(element: HTMLElement, message: string, badgeClass: string) {
-  const iconBadge = document.createElement('span')
-  iconBadge.setAttribute('class', `ic-badge badge ${badgeClass} float-end`)
-  iconBadge.innerHTML = message
-  element.append(iconBadge)
+  const iconBadge = document.createElement("span");
+  iconBadge.setAttribute("class", `ic-badge badge ${badgeClass} float-end`);
+  iconBadge.innerHTML = message;
+  element.append(iconBadge);
 
   setTimeout(() => {
-    iconBadge.remove()
-  }, 3000)
+    iconBadge.remove();
+  }, 3000);
 }
 </script>
 

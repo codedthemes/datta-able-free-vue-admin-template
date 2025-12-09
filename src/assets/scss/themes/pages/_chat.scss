@@ -7,6 +7,7 @@
     background: rgba(var(--bs-primary-rgb), 0.1);
   }
   .chat-user_list {
+    border-right: 1px solid var(--bs-border-color);
     .scroll-block {
       height: calc(100vh - 550px);
     }
@@ -15,6 +16,7 @@
   .chat-content {
     flex: 1 1 auto;
     min-width: 1%;
+    padding-bottom: 58px;
   }
 
   .chat-user_info {
@@ -51,17 +53,12 @@
       }
 
       .chat-user_list {
-        margin-right: 0;
-
         .scroll-block {
           height: calc(100vh - 370px);
         }
       }
 
       .chat-user_info {
-        margin-left: 0;
-        margin-right: 0;
-
         .scroll-block {
           height: calc(100vh - 315px);
         }
@@ -75,23 +72,16 @@
 }
 
 .chat-user_list {
-  width: 250px;
-  margin-right: var(--bs-gutter-x);
+  width: 320px;
 
   @include media-breakpoint-down(xxl) {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
-    width: calc(100% - 40px);
+    width: 100%;
   }
 }
 
 .chat-user_info {
   width: 270px;
-  margin-left: var(--bs-gutter-x);
   @include media-breakpoint-down(xxl) {
-    margin-left: 0 !important;
-    margin-right: 0;
-    padding-inline: 20px;
     width: 100%;
   }
 }
@@ -122,7 +112,7 @@
   .chat-badge {
     position: absolute;
     bottom: 1px;
-    right: 1px;
+    right: 4px;
   }
   .wid-40 {
     @include media-breakpoint-down(xxl) {
