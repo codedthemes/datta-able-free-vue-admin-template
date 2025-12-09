@@ -38,7 +38,7 @@ It is modern concept dashboard design with eye catchy colors. Wish you happy to 
 
 ## Getting Started
 
-1. Clone from Github
+1. Clone from GitHub
 
 ```
 git clone https://github.com/codedthemes/datta-able-free-vue-admin-template.git
